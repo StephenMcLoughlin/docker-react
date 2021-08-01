@@ -9,9 +9,6 @@ jobs:
       - setup_remote_docker
       - run: node --version
       - run:
-          name: Start container and verify it's working
-          command: docker build -t smakamura/docker-react -f Dockerfile.dev .
-      - run:
           name: Unit tests
           command: docker run -e CI=true smakamura/docker-react npm run test 
       - run: node --version  
