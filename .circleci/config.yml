@@ -13,4 +13,5 @@ jobs:
           command: docker build -t smakamura/docker-react -f Dockerfile.dev .
       - run:
           name: Unit tests
-          command: docker run -e CI=true smakamura/docker-react npm run test   
+          command: docker run -e CI=true smakamura/docker-react npm run test 
+      - run: node --version  
