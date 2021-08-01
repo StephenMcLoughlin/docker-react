@@ -10,3 +10,6 @@ jobs:
       - run:
           name: Start container and verify it's working
           command: docker build -t smakamura/docker-react -f Dockerfile.dev .
+      - run:
+          name: Unit test
+          command: docker run smakamura/docker-react npm run test -- --coverage    
