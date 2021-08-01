@@ -5,7 +5,7 @@ orbs:
   
 jobs: 
   run_tests: 
-    working_directory: ~/docker-react
+    working_directory: ~/app
     docker:
       - image: circleci/node:10.16.3
     steps: 
