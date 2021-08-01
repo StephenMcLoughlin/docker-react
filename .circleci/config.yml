@@ -16,5 +16,11 @@ jobs:
       - run:
           name: unit_tests
           command: docker run smakamura/docker-react npm run test -- --coverage 
+          
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - run_tests
       
     
